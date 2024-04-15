@@ -33,7 +33,7 @@ If you believe your framework has been misrepresented (or not represented at all
 
 As we said, we aim to lower the barrier of entry for ZK developers. Our SoK focuses on the performance, usability, and accessibility of these frameworks, providing developers that are new to ZK a great starting point to choose the right ZKP construction and framework for their applications. Our aim is to keep growing this repository, adding new frameworks and updating the included frameworks, as the ZK landscape evolves.
 
-In an adjacent effort to lower the barrier of entry to ZKPs, we also have an applicated-focused [website](https://practical-zk.github.io). We encourage developers of novel applications or authors of cutting-edge work to contribute to this website!
+In an adjacent effort to lower the barrier of entry to ZKPs, we also have an application-focused [website](https://practical-zk.github.io). We encourage developers of novel applications or authors of cutting-edge work to contribute to this website!
 
 ## Reference
 If our work has been useful to you, please cite us!
