@@ -20,5 +20,5 @@ docker build -t mozz .;  docker-compose up
 ## Building your own custom circuit and compiling
 
 1. Build an `.rs` file using syntax similar to this [here](https://github.com/nojansheybani/Mozzarella/blob/mozzarella/ocelot/src/bin/matrix_mul.rs) - there are also examples in the `ocelot/quarksilver` directory of this repo
-3. Add `COPY <file>.rs Mozzerella/ocelot/bin/`
-4. Change program call in `docker-compose.yml`
+2. Add `COPY <file>.rs Mozzerella/ocelot/bin/`
+3. Change program call in `docker-compose.yml`

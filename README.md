@@ -42,6 +42,8 @@ If our work has been useful to you, please cite us!
 ```
 
 ## TODO
+- Add which domains each framework excels in
+    - Do the same for schemes
 - Future proof the codebase (use custom forks for each framework)
 - Fix some of the frameworks that have been updated
 - Add benchmarks for frameworks that are not in SoK
