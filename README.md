@@ -50,3 +50,4 @@ If our work has been useful to you, please cite us!
 - Build `zkinterface` pipeline for better interoperability (and to get `libspartan` working)
 - Add further documentation for `Rosetta`
 - Add some pictures and graphs
+- Add build workflows to automate docker error discovery
