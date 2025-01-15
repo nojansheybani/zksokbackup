@@ -3,8 +3,11 @@ FROM rust:latest
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install \
     -y build-essential pkg-config libssl-dev
 
-RUN cargo install cargo-risczero
-RUN cargo risczero install
+#Update Installation
+RUN curl -L https://risczero.com/install | bash
+RUN . "/root/.bashrc" && rzup install
+# RUN cargo install cargo-risczero
+# RUN cargo risczero install
 
 RUN mkdir matmul/
 WORKDIR matmul

@@ -4,7 +4,7 @@ using namespace emp;
 
 void matmul(int dim) {
 	Integer a(8, 0, ALICE);
-	Integer b(8, 0, BOB);
+	Integer b(8, 0, ALICE);
 	Integer *A = new Integer[dim*dim];
 	Integer *B = new Integer[dim*dim];
 	Integer *C = new Integer[dim*dim];
@@ -32,10 +32,10 @@ void comp(int n) {
 }
 
 int main(int argc, char** argv) {
-	setup_plain_prot(true, "matmul64.txt");
+	setup_plain_prot(true, "matmul8.txt");
 	// matmul(4);
 	matmul(4);
 	finalize_plain_prot();
-	BristolFormat bf("matmul64.txt");
-	bf.to_file("matmul_file.h", "matmul");
+	BristolFormat bf("matmul8.txt");
+	bf.to_file("matmul8_file.h", "matmul8");
 }

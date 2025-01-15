@@ -1,4 +1,4 @@
-with open("matmul64.txt", "r") as in_file:
+with open("sha256.txt", "r") as in_file:
     lines = in_file.readlines()
 
 d = 0

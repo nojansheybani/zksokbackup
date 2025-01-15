@@ -1,13 +1,13 @@
 use.std::math::u64
 
 begin
-    repeat.4096
+    repeat.1024
         push.0
-        repeat.258048
+        repeat.64512
             mul.0
             add.1
         end
-        repeat.4096
+        repeat.1024
             mul.0
         end
     end

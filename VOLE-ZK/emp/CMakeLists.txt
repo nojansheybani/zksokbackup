@@ -25,5 +25,5 @@ set(ZK_LIBRARIES "/usr/local/lib/libemp-tool.so"
 if (FALSE)
 endif()
 
-add_executable(zktest src/matrix_mul.cpp)
+add_executable(zktest src/hash.cpp)
 target_link_libraries(zktest ${ZK_LIBRARIES})

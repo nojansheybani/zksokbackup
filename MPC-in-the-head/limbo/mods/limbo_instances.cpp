@@ -7,14 +7,26 @@
 
 static const limbo_instance_t instances[] = {
     {
-        6481,  // nb_mult_gates 3984
-        3984, // nb_add_gates 6481
-        16,   // input_size
-        128,   // output_size
+        22573,  // nb_mult_gates
+        110644, // nb_add_gates
+        768,   // input_size
+        256,   // output_size
         32,    // digest_size
         16,    // seed_size
         29,    // num_rounds
         64,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    },
+    {
+        32320,  // nb_mult_gates 3984
+        53057, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        48,    // num_rounds
+        8,    // num_MPC_parties
         16,     // compression_factor
         8      // lambda
     },
