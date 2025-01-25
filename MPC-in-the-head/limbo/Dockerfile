@@ -7,9 +7,9 @@ RUN git clone https://github.com/KULeuven-COSIC/Limbo.git
 
 WORKDIR Limbo
 
-COPY limbo_instances.cpp /Limbo/limbo_instances.cpp
-COPY BristolCircuit.cpp /Limbo/BristolCircuit.cpp
-COPY bench.cpp /Limbo/bin/bench.cpp
+COPY mods/limbo_instances.cpp /Limbo/limbo_instances.cpp
+COPY mods/BristolCircuit.cpp /Limbo/BristolCircuit.cpp
+COPY mods/bench.cpp /Limbo/bin/bench.cpp
 
 RUN mkdir build
 
@@ -19,5 +19,5 @@ RUN cmake .. && make
 
 # RUN wget https://nigelsmart.github.io/MPC-Circuits/sha256.txt && ./bench sha256.txt 0
 
-COPY matmul8.txt .
-RUN ./bench matmul8.txt 1
+COPY matmul/matmul16.txt .
+# RUN ./bench matmul16.txt 2

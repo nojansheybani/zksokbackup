@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
   Circuit C;
   load_circuit(C, argv[1]);
   const limbo_instance_t &instance = limbo_instance_get(atoi(argv[2])); 
-  size_t nbr = 10;
+  size_t nbr = 1;
 #ifdef DETAILED_IN_CODE_TIMERS
     for (size_t i = 0; i < 16; i++) {
       time_spans[i] = std::chrono::milliseconds::zero();

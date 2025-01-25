@@ -33,9 +33,42 @@ void comp(int n) {
 
 int main(int argc, char** argv) {
 	setup_plain_prot(true, "matmul8.txt");
-	// matmul(4);
-	matmul(4);
+	matmul(8);
 	finalize_plain_prot();
-	BristolFormat bf("matmul8.txt");
-	bf.to_file("matmul8_file.h", "matmul8");
+	BristolFormat bf8("matmul8.txt");
+
+	setup_plain_prot(true, "matmul16.txt");
+	matmul(16);
+	finalize_plain_prot();
+	BristolFormat bf16("matmul16.txt");
+
+	setup_plain_prot(true, "matmul24.txt");
+	matmul(24);
+	finalize_plain_prot();
+	BristolFormat bf24("matmul24.txt");
+
+	setup_plain_prot(true, "matmul32.txt");
+	matmul(32);
+	finalize_plain_prot();
+	BristolFormat bf32("matmul32.txt");
+
+	setup_plain_prot(true, "matmul48.txt");
+	matmul(48);
+	finalize_plain_prot();
+	BristolFormat bf48("matmul48.txt");
+
+	setup_plain_prot(true, "matmul64.txt");
+	matmul(64);
+	finalize_plain_prot();
+	BristolFormat bf64("matmul64.txt");
+
+	setup_plain_prot(true, "matmul100.txt");
+	matmul(100);
+	finalize_plain_prot();
+	BristolFormat bf100("matmul100.txt");
+
+	setup_plain_prot(true, "matmul128.txt");
+	matmul(128);
+	finalize_plain_prot();
+	BristolFormat bf128("matmul128.txt");
 }

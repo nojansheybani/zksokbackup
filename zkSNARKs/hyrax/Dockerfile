@@ -22,19 +22,19 @@ RUN git submodule update --init --recursive
 
 RUN make -j4
 
-# COPY matmul/run_fennel.py fennel/run_fennel.py
+COPY matmul/run_fennel.py fennel/run_fennel.py
 
 COPY matmul/ matmul/
 
 WORKDIR matmul
 
-RUN python matmult.py 128
+RUN python matmult.py 32
 
 RUN chmod +x run.sh && ./run.sh
 
-# RUN chmod +x process.sh && ./process.sh
+RUN chmod +x process.sh && ./process.sh
 
-# RUN chmod +x build.sh && ./build.sh
+RUN chmod +x build.sh && ./build.sh
 
 WORKDIR ..
 

@@ -21,6 +21,6 @@ RUN printf "\n\n%s\n%s\n\n" "add_executable(sha256 sha256.cc)" "target_link_libr
 WORKDIR ..
 
 WORKDIR build/src
-RUN make -j8 && ./examples/matrixsc 2
+RUN make -j8 && ./examples/matrixsc 5
 RUN make -j8 && ./examples/sha256
 

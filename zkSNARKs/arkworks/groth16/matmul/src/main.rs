@@ -15,6 +15,7 @@ pub type Curve = Bn254;
 pub type F = Fr;
 
 const BENCHMARK_ROUNDS: u32 = 10;
+const MATRIX_SIZE: usize = 8;
 
 #[derive(Clone)]
 struct MatmulCircuit {
@@ -27,7 +28,7 @@ struct MatmulCircuit {
 impl ConstraintSynthesizer<F> for MatmulCircuit {
     fn generate_constraints(self, cs: ConstraintSystemRef<F>) -> Result<(), SynthesisError> {
 
-        // All matrices are 128x128
+        // All matrices are MATRIX_SIZExMATRIX_SIZE
         let m = self.x.len();
         let t = self.x[0].len();
         let n = self.y[0].len();
@@ -89,10 +90,10 @@ fn main() {
         let val = i64::unsigned_abs(0);
         let zero_f: F = val.into();
 
-        // Make 128x128 0 matrices
-        let x = vec![vec![zero_f; 128]; 128];
-        let w = vec![vec![zero_f; 128]; 128];
-        let y = vec![vec![zero_f; 128]; 128];
+        // Make MATRIX_SIZExMATRIX_SIZE 0 matrices
+        let x = vec![vec![zero_f; MATRIX_SIZE]; MATRIX_SIZE];
+        let w = vec![vec![zero_f; MATRIX_SIZE]; MATRIX_SIZE];
+        let y = vec![vec![zero_f; MATRIX_SIZE]; MATRIX_SIZE];
 
         let circuit = MatmulCircuit {
             x : x.clone(),
@@ -102,13 +103,13 @@ fn main() {
 
         // Read Public Inputs
         let mut statement = Vec::new();
-        for i in 0..128 {
-            for j in 0..128 {
+        for i in 0..MATRIX_SIZE {
+            for j in 0..MATRIX_SIZE {
                 statement.push(x[i][j].clone());
             }
         }
-        for i in 0..128 {
-            for j in 0..128 {
+        for i in 0..MATRIX_SIZE {
+            for j in 0..MATRIX_SIZE {
                 statement.push(y[i][j].clone());
             }
         }

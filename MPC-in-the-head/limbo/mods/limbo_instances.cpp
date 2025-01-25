@@ -17,7 +17,31 @@ static const limbo_instance_t instances[] = {
         64,    // num_MPC_parties
         16,     // compression_factor
         8      // lambda
-    },
+    }, // SHA256 Limbo_C 0
+    {
+        22573,  // nb_mult_gates
+        110644, // nb_add_gates
+        768,   // input_size
+        256,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        48,    // num_rounds
+        8,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // SHA256 Limbo_R 1
+    {
+        32320,  // nb_mult_gates 3984
+        53057, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        29,    // num_rounds
+        64,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 8x8 Limbo_C 2
     {
         32320,  // nb_mult_gates 3984
         53057, // nb_add_gates 6481
@@ -29,7 +53,80 @@ static const limbo_instance_t instances[] = {
         8,    // num_MPC_parties
         16,     // compression_factor
         8      // lambda
-    },
+    }, // Matmul 8x8 Limbo_R 3
+    {
+        260352,  // nb_mult_gates 3984
+        429313, // nb_add_gates 6481
+        256,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        29,    // num_rounds
+        64,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 16x16 Limbo_C 4
+    {
+        260352,  // nb_mult_gates 3984
+        429313, // nb_add_gates 6481
+        256,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        48,    // num_rounds
+        8,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 16x16 Limbo_R 5
+    {
+        880704,  // nb_mult_gates 3984
+        1454401, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        29,    // num_rounds
+        64,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 24x24 Limbo_C 6
+    {
+        880704,  // nb_mult_gates 3984
+        1454401, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        48,    // num_rounds
+        8,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 24x24 Limbo_R 7
+    {
+        2089984,  // nb_mult_gates 3984
+        3453953, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        29,    // num_rounds
+        64,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 32x32 Limbo_C 8
+    {
+        2089984,  // nb_mult_gates 3984
+        3453953, // nb_add_gates 6481
+        64,   // input_size
+        128,   // output_size
+        32,    // digest_size
+        16,    // seed_size
+        48,    // num_rounds
+        8,    // num_MPC_parties
+        16,     // compression_factor
+        8      // lambda
+    }, // Matmul 32x32 Limbo_R 9
+    
 //Parameters below were defined to benchmark for different circuit size
 //these are the parameters used in the Limbo paper.
 #if SEC == 40

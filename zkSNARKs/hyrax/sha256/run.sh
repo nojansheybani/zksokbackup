@@ -5,7 +5,7 @@ if [[ $1 == "" ]]; then
     exit -1
 fi
 
-RUN="pypy -OO ../fennel/run_fennel.py -z 3 -C m191 -n 0 -w $1"
+RUN="pypy -OO ./run_fennel.py -z 3 -C m191 -n 0 -w $1"
 LOGDIR=log_w$(tr -d '.' <<< $1)
 mkdir -p ${LOGDIR}
 
